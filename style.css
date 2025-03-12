@@ -1,0 +1,49 @@
+/* style.css */
+body {
+    font-family: sans-serif;
+  }
+  
+  h1, h2 {
+    text-align: center;
+  }
+  
+  label {
+    display: inline-block;
+    width: 150px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  input[type="text"], input[type="number"] {
+    width: 200px;
+    padding: 5px;
+    margin-bottom: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  
+  button:hover {
+    background-color: #3e8e41;
+  }
+  
+  #carroEsportivoInfo, #caminhaoInfo {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+  }
+  
+  p {
+    margin: 5px 0;
+  }
+
+  #carroEsportivoInfo img, #caminhaoInfo img {
+    margin-bottom: 10px;
+    border: 1px solid #ccc; /* Adiciona uma borda */
+  }

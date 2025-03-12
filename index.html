@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carro e caminhão</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Herança em JavaScript</h1>
+
+  <h2>Carro Esportivo</h2>
+  <label for="modeloEsportivo">Modelo:</label>
+  <input type="text" id="modeloEsportivo" value="Ferrari"><br><br>
+  <label for="corEsportivo">Cor:</label>
+  <input type="text" id="corEsportivo" value="Vermelho"><br><br>
+  <button onclick="criarCarroEsportivo()">Criar Carro Esportivo</button><br><br>
+  <button onclick="ligarCarroEsportivo()">Ligar</button>
+  <button onclick="desligarCarroEsportivo()">Desligar</button>
+  <button onclick="acelerarCarroEsportivo()">Acelerar</button>
+  <button onclick="ativarTurbo()">Ativar Turbo</button><br><br>
+  <img src="img/florian-schneider-799KfBloSFQ-unsplash-scaled-removebg-preview.png" alt="carro">
+  <div id="carroEsportivoInfo"></div>
+
+  <h2>Caminhão</h2>
+  <label for="modeloCaminhao">Modelo:</label>
+  <input type="text" id="modeloCaminhao" value="Volvo"><br><br>
+  <label for="corCaminhao">Cor:</label>
+  <input type="text" id="corCaminhao" value="Azul"><br><br>
+  <label for="capacidadeCarga">Capacidade de Carga (kg):</label>
+  <input type="number" id="capacidadeCarga" value="10000"><br><br>
+  <button onclick="criarCaminhao()">Criar Caminhão</button><br><br>
+  <button onclick="ligarCaminhao()">Ligar</button>
+  <button onclick="desligarCaminhao()">Desligar</button>
+  <button onclick="acelerarCaminhao()">Acelerar</button>
+  <label for="quantidadeCarga">Quantidade a Carregar (kg):</label>
+  <input type="number" id="quantidadeCarga" value="1000"><br><br>
+  <button onclick="carregarCaminhao()">Carregar</button><br><br>
+  <img src="img/caminhao-de-reboque-com-carrinho-brinquedo-infantil-colorido_222693-removebg-preview.png" alt="caminhão">
+  <div id="caminhaoInfo"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
