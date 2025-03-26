@@ -1,49 +1,142 @@
-/* style.css */
 body {
-    font-family: sans-serif;
-  }
-  
-  h1, h2 {
-    text-align: center;
-  }
-  
-  label {
-    display: inline-block;
-    width: 150px;
-    text-align: right;
-    margin-right: 10px;
-  }
-  
-  input[type="text"], input[type="number"] {
-    width: 200px;
-    padding: 5px;
-    margin-bottom: 5px;
-  }
-  
-  button {
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    margin-right: 5px;
-  }
-  
-  button:hover {
-    background-color: #3e8e41;
-  }
-  
-  #carroEsportivoInfo, #caminhaoInfo {
-    margin-top: 20px;
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  p {
-    margin: 5px 0;
-  }
+  font-family: sans-serif;
+  text-align: center; /* Centraliza o conteúdo horizontalmente */
+}
 
-  #carroEsportivoInfo img, #caminhaoInfo img {
-    margin-bottom: 10px;
-    border: 1px solid #ccc; /* Adiciona uma borda */
-  }
+h1, h2 {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  width: 150px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+input[type="text"], input[type="number"] {
+  width: 200px;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+#carroEsportivoInfo, #caminhaoInfo {
+  margin-top: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  display: inline-block; /* Permite centralizar com text-align */
+}
+
+p {
+  margin: 5px 0;
+}
+
+#carroEsportivoInfo img, #caminhaoInfo img {
+  margin-bottom: 10px;
+  border: 1px solid #ccc; /* Adiciona uma borda */
+  display: block; /* Evita que a imagem fique alinhada à esquerda */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Status indicators */
+.ligado {
+  color: green;
+}
+
+.desligado {
+  color: red;
+}
+
+/* Alerts */
+#alert-container {
+  color: red;
+  margin-top: 10px;
+}
+
+.alert {
+  border: 1px solid red;
+  background-color: #ffe6e6;
+  padding: 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}
+
+/* Cores dos botões */
+.btn-ligar {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+/* Cores dos botões */
+.btn-ligar {
+  background-color: #4CAF50; /* Verde */
+  color: white;
+}
+
+.btn-desligar {
+  background-color: #f44336; /* Vermelho */
+  color: white;
+}
+
+.btn-acelerar {
+  background-color: #2196F3; /* Azul */
+  color: white;
+}
+
+.btn-frear {
+  background-color: #ff9800; /* Laranja */
+  color: white;
+}
+
+.btn-buzinar {
+  background-color: #9c27b0; /* Roxo */
+  color: white;
+}
+
+.btn-turbo {
+  background-color: #e91e63; /* Rosa */
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  margin-right: 5px;
+  margin-left: 5px; /* Adiciona margem à esquerda */
+  border-radius: 5px; /* Adiciona bordas arredondadas */
+}
+
+button:hover {
+  opacity: 0.8; /* Diminui a opacidade no hover */
+}
+
+/* Estilo da barra de progresso (velocidade) */
+progress {
+  -webkit-appearance: none; /* Remove estilos padrão do navegador (Chrome, Safari) */
+  appearance: none; /* Remove estilos padrão do navegador (Firefox, Edge) */
+  width: 100%; /* Ocupa toda a largura do container */
+  height: 10px; /* Define a altura da barra */
+  border-radius: 5px; /* Arredonda as bordas */
+}
+
+/* Estilo da barra de progresso para navegadores Chrome e Safari */
+progress::-webkit-progress-bar {
+  background-color: #f0f0f0; /* Cor de fundo da barra */
+  border-radius: 5px;
+}
+
+progress::-webkit-progress-value {
+  background-color: #2196F3; /* Azul */
+  border-radius: 5px;
+}
+
+/* Estilo da barra de progresso para navegadores Firefox */
+progress::-moz-progress-bar {
+  background-color: #2196F3; /* Azul */
+  border-radius: 5px;
+}

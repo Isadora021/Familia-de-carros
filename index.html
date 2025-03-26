@@ -7,38 +7,77 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Herança em JavaScript</h1>
+    <h1>Garagem Virtual</h1>
 
-  <h2>Carro Esportivo</h2>
-  <label for="modeloEsportivo">Modelo:</label>
-  <input type="text" id="modeloEsportivo" value="Ferrari"><br><br>
-  <label for="corEsportivo">Cor:</label>
-  <input type="text" id="corEsportivo" value="Vermelho"><br><br>
-  <button onclick="criarCarroEsportivo()">Criar Carro Esportivo</button><br><br>
-  <button onclick="ligarCarroEsportivo()">Ligar</button>
-  <button onclick="desligarCarroEsportivo()">Desligar</button>
-  <button onclick="acelerarCarroEsportivo()">Acelerar</button>
-  <button onclick="ativarTurbo()">Ativar Turbo</button><br><br>
-  <img src="img/florian-schneider-799KfBloSFQ-unsplash-scaled-removebg-preview.png" alt="carro">
-  <div id="carroEsportivoInfo"></div>
+    <h2>Carro Esportivo</h2>
+    <label for="modeloEsportivo">Modelo:</label>
+    <input type="text" id="modeloEsportivo" value="Ferrari"><br><br>
+    <label for="corEsportivo">Cor:</label>
+    <input type="text" id="corEsportivo" value="Vermelho"><br><br>
+    <button onclick="criarCarroEsportivo()">Criar Carro Esportivo</button><br><br>
 
-  <h2>Caminhão</h2>
-  <label for="modeloCaminhao">Modelo:</label>
-  <input type="text" id="modeloCaminhao" value="Volvo"><br><br>
-  <label for="corCaminhao">Cor:</label>
-  <input type="text" id="corCaminhao" value="Azul"><br><br>
-  <label for="capacidadeCarga">Capacidade de Carga (kg):</label>
-  <input type="number" id="capacidadeCarga" value="10000"><br><br>
-  <button onclick="criarCaminhao()">Criar Caminhão</button><br><br>
-  <button onclick="ligarCaminhao()">Ligar</button>
-  <button onclick="desligarCaminhao()">Desligar</button>
-  <button onclick="acelerarCaminhao()">Acelerar</button>
-  <label for="quantidadeCarga">Quantidade a Carregar (kg):</label>
-  <input type="number" id="quantidadeCarga" value="1000"><br><br>
-  <button onclick="carregarCaminhao()">Carregar</button><br><br>
-  <img src="img/caminhao-de-reboque-com-carrinho-brinquedo-infantil-colorido_222693-removebg-preview.png" alt="caminhão">
-  <div id="caminhaoInfo"></div>
 
-  <script src="script.js"></script>
+    <div id="carroEsportivoInfo">
+        <img id="carroEsportivoImagem"
+            src="img/florian-schneider-799KfBloSFQ-unsplash-scaled-removebg-preview.png"
+            alt="Carro Esportivo">
+        <p>Status: <span id="carroEsportivoStatus"></span></p>
+        <progress id="carroEsportivoVelocidade" value="0" max="200"></progress>
+        <span id="carroEsportivoVelocidadeValor">0 km/h</span>
+        <br><br>
+        <button onclick="ligarCarroEsportivo()" class="btn-ligar">Ligar</button>
+        <button onclick="desligarCarroEsportivo()" class="btn-desligar">Desligar</button>
+        <button onclick="acelerarCarroEsportivo()" class="btn-acelerar">Acelerar</button>
+        <button onclick="frearCarroEsportivo()" class="btn-frear">Frear</button>
+        <button onclick="buzinarCarroEsportivo()" class="btn-buzinar">Buzinar</button>
+        <button onclick="ativarTurbo()" class="btn-turbo">Ativar Turbo</button>
+        <br><br>
+    </div>
+
+    <h2>Caminhão</h2>
+    <label for="modeloCaminhao">Modelo:</label>
+    <input type="text" id="modeloCaminhao" value="Volvo"><br><br>
+    <label for="corCaminhao">Cor:</label>
+    <input type="text" id="corCaminhao" value="Azul"><br><br>
+    <label for="capacidadeCarga">Capacidade de Carga (kg):</label>
+    <input type="number" id="capacidadeCarga" value="10000"><br><br>
+    <button onclick="criarCaminhao()">Criar Caminhão</button><br><br>
+
+
+    <div id="caminhaoInfo">
+        <img id="caminhaoImagem"
+            src="img/caminhao-de-reboque-com-carrinho-brinquedo-infantil-colorido_222693-removebg-preview.png"
+            alt="Caminhão">
+        <p>Status: <span id="caminhaoStatus"></span></p>
+        <progress id="caminhaoVelocidade" value="0" max="120"></progress>
+        <span id="caminhaoVelocidadeValor">0 km/h</span>
+        <p>Carga Atual: <span id="caminhaoCargaAtual">0 kg</span> / <span id="caminhaoCapacidadeCarga">10000 kg</span>
+        </p>
+        <br><br>
+        <button onclick="ligarCaminhao()" class="btn-ligar">Ligar</button>
+        <button onclick="desligarCaminhao()" class="btn-desligar">Desligar</button>
+        <button onclick="acelerarCaminhao()" class="btn-acelerar">Acelerar</button>
+        <button onclick="frearCaminhao()" class="btn-frear">Frear</button>
+        <button onclick="buzinarCaminhao()" class="btn-buzinar">Buzinar</button>
+        <br><br>
+        <label for="quantidadeCarga">Quantidade a Carregar (kg):</label>
+        <input type="number" id="quantidadeCarga" value="1000"><br><br>
+        <button onclick="carregarCaminhao()">Carregar</button><br><br>
+    </div>
+
+    <div id="alert-container"></div>
+
+    <!-- Audio elements -->
+    <audio id="audioBuzina" src="assets/audio/buzina.mp3" preload="auto"></audio>
+    <audio id="audioAceleracao" src="assets/audio/aceleracao.mp3" preload="auto"></audio>
+    <audio id="audioFrenagem" src="assets/audio/frenagem.mp3" preload="auto"></audio>
+    <audio id="audioLigar" src="assets/audio/ligar.mp3" preload="auto"></audio>
+    <audio id="audioDesligar" src="assets/audio/desligar.mp3" preload="auto"></audio>
+    <audio id="audioTurbo" src="assets/audio/turbo.mp3" preload="auto"></audio>
+
+    <label for="volume">Volume:</label>
+    <input type="range" id="volume" min="0" max="1" step="0.1" value="0.5">
+
+    <script src="script.js"></script>
 </body>
 </html>
